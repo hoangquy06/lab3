@@ -1,0 +1,188 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* App-wide layout */
+.app-root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--text);
+}
+
+/* Headings */
+.app-root h1 {
+  font-size: 2.2rem;
+  letter-spacing: 0.2px;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.app-root h2 {
+  font-size: 1.4rem;
+  margin: 0 0 .75rem 0;
+  color: var(--muted, #5b6b81);
+}
+
+/* Section spacing */
+.section { margin-top: 24px; }
+
+/* Card */
+.card {
+  padding: 1rem;
+  background: var(--card-bg, rgba(255,255,255,0.03));
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card-title {
+  margin: 0 0 .5rem 0;
+  font-size: 1.05rem;
+}
+
+/* Profile card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  padding: 12px;
+  max-width: 280px;
+}
+
+.profile-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(100,108,255,0.18);
+  box-shadow: 0 6px 14px rgba(16,24,40,0.12);
+}
+
+/* Theme modifiers for profile */
+.theme-light {
+  background-color: #ffffff;
+  color: #213547;
+}
+.theme-light .profile-avatar {
+  border-color: rgba(100,108,255,0.24);
+}
+
+.theme-dark {
+  background-color: #1f2937;
+  color: #e6eef6;
+}
+.theme-dark .profile-avatar {
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* Panel (Accordion, Counter, etc.) */
+.panel {
+  background: var(--card-bg, rgba(255,255,255,0.03));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 28px rgba(2,6,23,0.5);
+}
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.panel-body { margin-top: 8px; }
+
+/* Form and input styles */
+input[type="text"], input[type="password"], input[type="search"], input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.03);
+  color: inherit;
+}
+
+form {
+  display: block;
+}
+
+/* Todo list */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  margin-bottom: 8px;
+}
+
+.todo-list li .todo-text {
+  flex: 1;
+}
+
+/* Buttons refinement */
+button{padding:8px 12px; border-radius:8px}
+button:hover{transform: translateY(-1px)}
+
+/* Card grid */
+.app-root > div{display:flex; gap:1rem; flex-wrap:wrap}
+
+
+/* Small responsive layout tweaks */
+@media (max-width: 720px) {
+  .app-root {
+    padding: 1rem;
+  }
+  .card { min-width: 100%; }
+}
